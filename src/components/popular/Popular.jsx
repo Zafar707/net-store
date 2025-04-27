@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee"; // Importing react-fast-marquee
+import { useNavigate } from "react-router-dom";
 
 const Popular = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate(); // Nomni o‘zgartirdim
 
   // Fetch 17 products from Fake Store API
   useEffect(() => {
@@ -69,7 +71,10 @@ const Popular = () => {
       <p className="text-lg font-bold text-gray-800 mb-2">
         ${product.price.toFixed(2)}
       </p>
-      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+      <button
+        onClick={() => navigate(`/products/${product.id}`)} // Yo‘nalishni to‘g‘riladim
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+      >
         Buyurtma berish
       </button>
     </div>
@@ -77,7 +82,7 @@ const Popular = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col w-[1200px] h-[500px] mt-8 ">
+      <div className="flex flex-col w-[1200px] mt-8">
         {/* Header with Title */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="font-bold text-center text-gray-800 text-2xl">

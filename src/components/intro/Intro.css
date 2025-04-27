@@ -1,0 +1,17 @@
+.intro {
+    padding-bottom: 40px; /* Pastki bo‘shliq */
+  }
+  
+  .intro_wrap {
+    background-image: url("/src/image/back.png"); /* Rasm public/image/back.png da bo‘lishi kerak */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px; /* Minimal balandlik */
+    position: relative;
+    border: 2px solid #3b82f6; /* Rasmda ko‘rsatilgan ko‘k chegara */
+    border-radius: 20px; /* Yumaloq burchaklar */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }

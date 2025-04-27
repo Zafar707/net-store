@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee"; // Importing react-fast-marquee
+import { useNavigate } from "react-router-dom";
 
 const Discount = () => {
   const [products, setProducts] = useState([]);
   const [timeLeft, setTimeLeft] = useState(3600); // Timer set to 1 hour (in seconds)
   const [showAll, setShowAll] = useState(false); // State to toggle all products
+  const usenavigate = useNavigate();
 
   // Fetch 17 products from Fake Store API
   useEffect(() => {
@@ -86,7 +88,7 @@ const Discount = () => {
       <p className="text-lg font-bold text-gray-800 mb-2">
         ${product.price.toFixed(2)}
       </p>
-      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+      <button onClick={()=> usenavigate(`/products/${product.id}`)} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
         Buyurtma berish
       </button>
     </div>

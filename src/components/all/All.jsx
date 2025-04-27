@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee"; // Importing react-fast-marquee
+import { useNavigate } from "react-router-dom";
 
 const All = () => {
   const [products, setProducts] = useState([]);
+  const usenavigate = useNavigate();
 
   // Fetch 17 products from Fake Store API
   useEffect(() => {
@@ -88,7 +90,7 @@ const All = () => {
             </svg>
           ))}
         </div>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        <button onClick={() => usenavigate(`/products/${product.id}`)} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
           Buyurtma berish
         </button>
       </div>
