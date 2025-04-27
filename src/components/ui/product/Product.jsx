@@ -16,7 +16,7 @@ const Product = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="w-[1200px] mt-9 py-8">
+      <div className="w-[1200px] min-h-[800px] mt-9 py-8">
         {product ? (
           <div>
             {/* Mahsulot detal bo‘limi */}
