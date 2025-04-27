@@ -1,23 +1,27 @@
 import React from "react";
-const Intro = ({Product}) => {
+import Nout from '../../image/original.png';
 
+const Intro = () => {
   return (
-    <div className="rounded-[20px] bg-blue-200 w-[1200px] h-[500px] mt-[500px]">
-      <div>
-        <h2 className=" text-[50px] text-xl font-bold">
-          New Laptop
-        </h2>
-        <p className="text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </p>
-        <button className="  bg-blue-500 text-white py-2 px-4 rounded w-[130px] h-[50px]">
-          Shop now
-        </button>
-          {/* <img src={Product.image} alt="" /> */}
+    <div className="bg-white py-10">
+      <div className="max-w-[1200px] mx-auto mt-[90px] px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="flex flex-col gap-6">
+          <h2 className="text-4xl md:text-5xl font-bold">
+            New Laptop
+          </h2>
+          <p className="text-lg md:text-2xl">
+            Lorem ipsum dolor sit <br /> amet consectetur.
+          </p>
+          <button className="bg-blue-500 hover:bg-blue-600 transition text-white py-2 px-6 rounded w-fit">
+            Shop now
+          </button>
+        </div>
+        <div className="flex justify-center">
+          <img src={Nout} alt="nout" className="max-w-full h-auto" />
+        </div>
       </div>
     </div>
   );
-
 };
 
 export default Intro;
