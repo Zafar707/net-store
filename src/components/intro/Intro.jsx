@@ -1,30 +1,31 @@
 import React from "react";
-import Nout from "../../image/original.png"; // Rasm yo‘li to‘g‘ri ekanligiga ishonch hosil qiling
-import "./Intro.css"; // CSS faylini import qilish
+import Nout from "../../image/original.png";
+import BackImage from "../../image/back.png";
+import "./Intro.css";
 
 const Intro = () => {
   return (
-    <div className="intro">
-      <div className="intro_wrap max-w-[1200px] mx-auto mt-16 px-4 flex flex-col md:flex-row justify-between items-center gap-8">
-        {/* Matn va Tugma */}
-        <div className="flex flex-col gap-6 max-w-md z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+    <div className="intro pt-36 sm:pt-40 bg-gray-50">
+      <div
+        className="intro_wrap max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 shadow-xl hover:shadow-2xl transition-all duration-300"
+        style={{ backgroundImage: `url(${BackImage})` }}
+      >
+        <div className="flex flex-col gap-4 sm:gap-6 max-w-md z-10 px-4 py-6 sm:p-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
             New Laptop
           </h2>
-          <p className="text-lg md:text-xl text-gray-600">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700">
             Lorem ipsum dolor sit <br /> amet consectetur.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg w-fit transition-all duration-200">
+          <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 sm:px-6 rounded-lg w-fit font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">
             Shop now
           </button>
         </div>
-
-        {/* Rasm */}
-        <div className="flex justify-center z-10">
+        <div className="flex justify-center z-10 px-4 py-6 sm:p-6">
           <img
             src={Nout}
-            alt="nout"
-            className="max-w-full h-auto md:max-w-[600px] object-contain"
+            alt="New laptop product image"
+            className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-auto object-contain transform hover:scale-105 transition-all duration-300"
           />
         </div>
       </div>

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const All = () => {
   const [products, setProducts] = useState([]);
-  const usenavigate = useNavigate();
+  const navigate = useNavigate(); // Nomni o‘zgartirdim
 
   // Fetch 17 products from Fake Store API
   useEffect(() => {
@@ -23,7 +23,7 @@ const All = () => {
     const rating = Math.floor(Math.random() * 3) + 3;
 
     return (
-      <div className="relative bg-white rounded-lg shadow-md p-4 w-60 text-center mx-2">
+      <div className="relative bg-white rounded-lg shadow-md p-4 w-48 sm:w-56 md:w-60 text-center mx-2 transition-all duration-200 hover:shadow-lg hover:scale-105">
         {isNew && (
           <div className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
             NEW
@@ -72,16 +72,16 @@ const All = () => {
         <img
           src={product.image}
           alt={product.title}
-          className="w-40 h-40 mx-auto mb-4 object-contain"
+          className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 object-contain"
         />
-        <p className="text-lg font-bold text-gray-800 mb-2">
+        <p className="text-base sm:text-lg font-bold text-gray-800 mb-2">
           ${product.price.toFixed(2)}
         </p>
         <div className="flex justify-center mb-2">
           {[...Array(rating)].map((_, i) => (
             <svg
               key={i}
-              className="w-5 h-5 text-yellow-500"
+              className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,10 @@ const All = () => {
             </svg>
           ))}
         </div>
-        <button onClick={() => usenavigate(`/products/${product.id}`)} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        <button
+          onClick={() => navigate(`/product/${product.id}`)} // Yo‘nalishni to‘g‘riladim
+          className="bg-blue-500 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-blue-600 text-sm sm:text-base transition-all duration-200"
+        >
           Buyurtma berish
         </button>
       </div>
@@ -99,7 +102,7 @@ const All = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="w-[1200px] h-[500px] mt-9 py-8">
+      <div className="max-w-6xl w-full mt-9 py-8 px-4 sm:px-6 lg:px-8">
         {/* Marquee Section */}
         <div className="mb-8">
           {products.length > 0 ? (
