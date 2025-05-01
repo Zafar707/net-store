@@ -11,10 +11,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-opacity-90 backdrop-blur-lg shadow-lg fixed top-14 left-0 right-0 z-40">
-      <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-r from-blue-800 to-indigo-900 bg-opacity-90 backdrop-blur-xl shadow-lg fixed top-14 left-0 right-0 z-40">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
         {/* Brand Logo */}
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-wide">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-wider bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
           BrandLogo
         </h2>
 
@@ -25,8 +25,8 @@ const Navbar = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white font-semibold border-b-2 border-white pb-1"
-                  : "text-gray-200 hover:text-white hover:border-b-2 hover:border-white pb-1 transition-all duration-300"
+                  ? "text-white font-semibold border-b-2 border-blue-400 pb-1"
+                  : "text-gray-200 hover:text-white hover:border-b-2 hover:border-blue-400 pb-1 transition-all duration-300"
               }
             >
               Bosh sahifa
@@ -37,8 +37,8 @@ const Navbar = () => {
               to="/catalog"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white font-semibold border-b-2 border-white pb-1"
-                  : "text-gray-200 hover:text-white hover:border-b-2 hover:border-white pb-1 transition-all duration-300"
+                  ? "text-white font-semibold border-b-2 border-blue-400 pb-1"
+                  : "text-gray-200 hover:text-white hover:border-b-2 hover:border-blue-400 pb-1 transition-all duration-300"
               }
             >
               Katalog
@@ -49,8 +49,8 @@ const Navbar = () => {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white font-semibold border-b-2 border-white pb-1"
-                  : "text-gray-200 hover:text-white hover:border-b-2 hover:border-white pb-1 transition-all duration-300"
+                  ? "text-white font-semibold border-b-2 border-blue-400 pb-1"
+                  : "text-gray-200 hover:text-white hover:border-b-2 hover:border-blue-400 pb-1 transition-all duration-300"
               }
             >
               Biz haqimizda
@@ -61,8 +61,8 @@ const Navbar = () => {
               to="/contact"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white font-semibold border-b-2 border-white pb-1"
-                  : "text-gray-200 hover:text-white hover:border-b-2 hover:border-white pb-1 transition-all duration-300"
+                  ? "text-white font-semibold border-b-2 border-blue-400 pb-1"
+                  : "text-gray-200 hover:text-white hover:border-b-2 hover:border-blue-400 pb-1 transition-all duration-300"
               }
             >
               Aloqa
@@ -74,9 +74,9 @@ const Navbar = () => {
         <div className="md:hidden">
           <button onClick={toggleModal}>
             {isModalOpen ? (
-              <IoClose size={28} className="text-white" />
+              <IoClose size={28} className="text-white hover:text-blue-400 transition-all duration-300" />
             ) : (
-              <IoMenu size={28} className="text-white" />
+              <IoMenu size={28} className="text-white hover:text-blue-400 transition-all duration-300" />
             )}
           </button>
         </div>
@@ -86,13 +86,13 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Qidirish"
-            className="border border-gray-300 rounded-lg p-2 pl-4 w-40 lg:w-48 bg-white bg-opacity-20 text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300"
+            className="border border-gray-500 bg-gray-800 bg-opacity-50 text-gray-200 placeholder-gray-400 rounded-full p-2 pl-4 w-40 lg:w-48 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-300"
           />
-          <CiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white" size={20} />
+          <CiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-200 hover:text-blue-400 transition-all duration-300" size={20} />
         </div>
 
         {/* Contact Button (Desktop) */}
-        <button className="hidden md:flex items-center gap-2 bg-white text-blue-600 rounded-full px-3 lg:px-4 py-2 text-xs lg:text-sm font-semibold hover:bg-gray-100 transition-all duration-300">
+        <button className="hidden md:flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full px-3 lg:px-4 py-2 text-xs lg:text-sm font-semibold hover:from-blue-600 hover:to-indigo-600 hover:shadow-lg transition-all duration-300">
           <IoCallOutline size={16} />
           Aloqaga chiqish
         </button>
@@ -100,23 +100,25 @@ const Navbar = () => {
 
       {/* Modal Menu (Mobile) */}
       {isModalOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-11/12 max-w-sm shadow-xl">
+        <div className="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 flex items-center justify-center z-50">
+          <div className="bg-gray-800 bg-opacity-90 backdrop-blur-xl rounded-xl p-6 w-11/12 max-w-sm shadow-2xl">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-xl font-bold text-gray-800">Menyu</h2>
+              <h2 className="text-xl font-bold text-white bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                Menyu
+              </h2>
               <button onClick={toggleModal}>
-                <IoClose size={24} className="text-gray-800" />
+                <IoClose size={24} className="text-white hover:text-blue-400 transition-all duration-300" />
               </button>
             </div>
-            <ul className="flex flex-col gap-4 text-lg text-gray-800">
+            <ul className="flex flex-col gap-4 text-lg text-gray-200">
               <li>
                 <NavLink
                   to="/"
                   onClick={toggleModal}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-blue-500 font-semibold"
-                      : "hover:text-blue-500 transition-all duration-300"
+                      ? "text-blue-400 font-semibold"
+                      : "hover:text-blue-400 transition-all duration-300"
                   }
                 >
                   Bosh sahifa
@@ -128,8 +130,8 @@ const Navbar = () => {
                   onClick={toggleModal}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-blue-500 font-semibold"
-                      : "hover:text-blue-500 transition-all duration-300"
+                      ? "text-blue-400 font-semibold"
+                      : "hover:text-blue-400 transition-all duration-300"
                   }
                 >
                   Katalog
@@ -141,8 +143,8 @@ const Navbar = () => {
                   onClick={toggleModal}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-blue-500 font-semibold"
-                      : "hover:text-blue-500 transition-all duration-300"
+                      ? "text-blue-400 font-semibold"
+                      : "hover:text-blue-400 transition-all duration-300"
                   }
                 >
                   Biz haqimizda
@@ -154,8 +156,8 @@ const Navbar = () => {
                   onClick={toggleModal}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-blue-500 font-semibold"
-                      : "hover:text-blue-500 transition-all duration-300"
+                      ? "text-blue-400 font-semibold"
+                      : "hover:text-blue-400 transition-all duration-300"
                   }
                 >
                   Aloqa
@@ -167,11 +169,11 @@ const Navbar = () => {
                 <input
                   type="text"
                   placeholder="Qidirish"
-                  className="border border-gray-300 rounded-lg p-2 pl-4 w-full bg-gray-100 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300"
+                  className="border border-gray-600 bg-gray-900 bg-opacity-50 text-gray-200 placeholder-gray-400 rounded-full p-2 pl-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-300"
                 />
-                <CiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
+                <CiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-200 hover:text-blue-400 transition-all duration-300" size={20} />
               </div>
-              <button className="flex items-center justify-center gap-2 bg-blue-500 text-white rounded-full px-4 py-2 w-full text-sm font-semibold hover:bg-blue-600 transition-all duration-300">
+              <button className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full px-4 py-2 w-full text-sm font-semibold hover:from-blue-600 hover:to-indigo-600 hover:shadow-lg transition-all duration-300">
                 <IoCallOutline size={18} />
                 Aloqaga chiqish
               </button>
