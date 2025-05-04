@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Starter = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-blue-900 bg-opacity-80 backdrop-blur-xl fixed top-0 left-0 right-0 z-50 shadow-lg h-14">
+    <div className="bg-gradient-to-r from-gray-900 to-blue-900 bg-opacity-80 backdrop-blur-xl shadow-lg h-14">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between py-3 px-4 sm:px-6 lg:px-8 text-gray-100 gap-3 sm:gap-4 text-sm sm:text-base h-full">
         <p className="flex items-center gap-2 text-amber-300 hover:text-amber-200 transition-all duration-300 group">
           <FaLocationDot size={14} className="group-hover:scale-110 transition-transform duration-300" />
@@ -24,4 +24,4 @@ const Starter = () => {
   );
 };
 
-export default Starter;
+export default Starter; 

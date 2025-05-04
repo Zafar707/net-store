@@ -14,7 +14,7 @@ const Popular = () => {
   }, []);
 
   const ProductCard = ({ product }) => (
-    <div className="relative bg-white rounded-xl shadow-lg p-3 sm:p-4 w-48 sm:w-56 md:w-60 text-center mx-2 hover:shadow-xl hover:bg-gray-50 transition-all duration-300">
+    <div className="relative bg-white rounded-xl shadow-lg p-3 sm:p-4 w-48 sm:w-56 md:w-60 text-center mx-2 hover:shadow-xl hover:bg-gray-50 transition-all duration-300 z-56">
       <div className="absolute top-2 left-2 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-lg">
         -35%
       </div>
@@ -70,7 +70,7 @@ const Popular = () => {
         ${product.price.toFixed(2)}
       </p>
       <button
-        onClick={() => navigate(`/product/${product.id}`)}
+        onClick={() => navigate(`/products/${product.id}`)}
         className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300"
       >
         Buyurtma berish

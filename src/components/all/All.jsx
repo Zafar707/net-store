@@ -91,7 +91,7 @@ const All = () => {
           ))}
         </div>
         <button
-          onClick={() => navigate(`/product/${product.id}`)} // Yo‘nalishni to‘g‘riladim
+          onClick={() => navigate(`/products/${product.id}`)} // Yo‘nalishni to‘g‘riladim
           className="bg-blue-500 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded hover:bg-blue-600 text-sm sm:text-base transition-all duration-200"
         >
           Buyurtma berish

@@ -85,7 +85,7 @@ const Discount = () => {
         ${product.price.toFixed(2)}
       </p>
       <button
-        onClick={() => navigate(`/product/${product.id}`)}
+        onClick={() => navigate(`/products/${product.id}`)}
         className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300"
       >
         Buyurtma berish

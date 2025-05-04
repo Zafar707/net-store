@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-800 to-indigo-900 bg-opacity-90 backdrop-blur-xl shadow-lg fixed top-14 left-0 right-0 z-40">
+    <div className="bg-gradient-to-r from-blue-800 to-indigo-900 bg-opacity-90 backdrop-blur-xl shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
         {/* Brand Logo */}
         <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-wider bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
@@ -185,4 +185,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 

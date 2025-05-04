@@ -5,7 +5,7 @@ import "./Intro.css";
 
 const Intro = () => {
   return (
-    <div className="intro pt-32 sm:pt-36 bg-gray-50">
+    <div className="intro pt-4 sm:pt-6 bg-gray-50">
       <div
         className="intro_wrap max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 shadow-xl hover:shadow-2xl transition-all duration-500"
         style={{ backgroundImage: `url(${BackImage})` }}
